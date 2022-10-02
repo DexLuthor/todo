@@ -1,0 +1,9 @@
+<div class="card"
+  (click)="onTodoClicked()"
+  [ngClass]="{'card-done': todoProps?.done  }"
+>
+  <span class="content" [ngClass]="{'done': todoProps?.done }">
+    {{ todoProps?.content }}
+  </span>
+</div>
+

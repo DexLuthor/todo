@@ -1,0 +1,23 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+.addTodo {
+  width: 300px;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}

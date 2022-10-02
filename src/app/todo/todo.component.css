@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+
+  background-color: #3071e7;
+  color: #fff;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px 20px;
+
+  border-radius: 8px;
+  transition: transform .3s, box-shadow .3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translate(2px, -2px);
+  box-shadow: -2px 2px 10px -3px #161e35;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.card-done {
+  background-color: #ccc;
+}
