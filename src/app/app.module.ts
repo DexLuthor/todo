@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoComponent } from './todo/todo.component';
-import { AddNewTodoComponent } from './add-new-todo/add-new-todo.component';
+import { TodoComponent } from './components/todo/todo.component';
+import { AddNewTodoComponent } from './components/add-new-todo/add-new-todo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AddNewTodoComponent } from './add-new-todo/add-new-todo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

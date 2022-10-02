@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { JokeService } from './services/joke.service';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,11 @@ export class AppComponent {
     { id: 4, content: 'lorem ipsum dolor sit amet hello world', done: false },
   ];
 
+  joke: string = ""
+
+  constructor(private jokeService: JokeService) {
+  }
+
   newTodoChanged(todo: string) {
     this.todos.unshift({ id: 5, content: todo, done: false })
   }
@@ -22,5 +29,10 @@ export class AppComponent {
     const todo = this.todos.find(todo => todo.id === id)
 
     todo!.done = !todo?.done;
+  }
+
+  fetchJoke() {
+    this.jokeService.fetchJoke()
+      .subscribe(result => this.joke = result.joke)
   }
 }
